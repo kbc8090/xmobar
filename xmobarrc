@@ -23,23 +23,25 @@ Config {
    , iconRoot         = "/home/kbc/.config/xmobar/xpm/"  -- default: "."
    , sepChar          = "%"
    , alignSep         = "}{"
-   , template         = "<action='jgmenu_run'><icon=haskell_20.xpm/></action><fc=white><action=button=4><action=button=5> %UnsafeStdinReader%</action></action></fc>}{<fc=white> %update%</fc><fc=#c792ea>|</fc> %memory% <fc=#c792ea>|</fc><fc=#82aaff><fn=3>  </fn></fc>%uname% <fc=#c792ea>|</fc> %KGNV% <fc=#c792ea>|</fc> <action=`pavucontrol` button=3><action=`XMMute` button=1><action=button=4><action=button=5>%XVol%</action></action></action></action><action=`gsimplecal` button=1><fc=#c792ea>|</fc> <fc=#82aaff><fn=2></fn></fc> %date% </action><fc=#c792ea>|</fc> %trayerpad%"
+   , template         = "<action='jgmenu_run'><icon=haskell_20.xpm/></action><fc=white><action=button=4><action=button=5> %UnsafeStdinReader%</action></action></fc>}{<fc=white> %update%</fc><fc=#c792ea>|</fc><fc=#82aaff><fn=3>   </fn></fc>%memory% <fc=#c792ea>|</fc><fc=#82aaff><fn=3>  </fn></fc>%uname% <fc=#c792ea>|</fc> %KGNV% <fc=#c792ea>|</fc> <action=`pavucontrol` button=3><action=`XMMute` button=1><action=button=4><action=button=5>%XVol%</action></action></action></action><action=`gsimplecal` button=1><fc=#c792ea>|</fc> <fc=#82aaff><fn=2></fn></fc> %date% </action><fc=#c792ea>|</fc> %trayerpad%"
    , commands         = [ 
-		Run Memory [ "--template" ,"<fc=#82AAFF><fn=2> </fn></fc><fc=white></fc> <used>/<total>Mb"] 10
+		--Run Memory [ "--template" ,"<fc=#82AAFF><fn=2> </fn></fc><fc=white></fc> <used>/<total>Mb"] 300
 
-     , Run Weather "KGNV" ["-t","<fc=#82aaff><fn=2></fn></fc> <skyCondition> <tempF>F","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
+     Run Weather "KGNV" ["-t","<fc=#82aaff><fn=2></fn></fc> <skyCondition> <tempF>F","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 9000
 
-	  , Run Com "/home/kbc/.config/xmobar/scripts/XMgetvolume" [] "XVol" 10
+	  , Run Com "/home/kbc/.config/xmobar/scripts/XMgetvolume" [] "XVol" 30
 
 	  , Run Com "/home/kbc/.xmonad/scripts/trayer-padding.sh" [] "trayerpad" 20
 	  
 	  , Run Com  "uname" ["-r"] "" 36000
 
+	  , Run Com "/home/kbc/.config/xmobar/scripts/memory.sh" [] "memory" 30
+
      , Run UnsafeStdinReader
 
-	  , Run Com "/home/kbc/.config/xmobar/scripts/XMKupdate" [] "update" 600
+	  , Run Com "/home/kbc/.config/xmobar/scripts/XMKupdate" [] "update" 3000
 	  
-      , Run Date "%a, %b %d %l:%M%p" "date" 60
+      , Run Date "%a, %b %d%l:%M%p" "date" 50
     ]
 
 }
