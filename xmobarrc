@@ -2,7 +2,7 @@
 -- https://github.com/krive001/xmonad-xmobar
 
 Config {
-    font = "xft:Ubuntu Mono:size=11:style=Bold:antialias=true:autohint=true:dpi=96",
+    font = "xft:Ubuntu Mono:size=12:style=Bold:antialias=true:autohint=true:dpi=96",
     additionalFonts = ["xft:Noto Sans:size=10:style=Bold","xft:FontAwesome:style=Regular:size=11","xft:CaskaydiaCove Nerd Font:size=12"]
 --   , bgColor          = "#2F343F"
    , bgColor          = "#1b1e2b"   
@@ -23,7 +23,7 @@ Config {
    , iconRoot         = "/home/kbc/.config/xmobar/xpm/"  -- default: "."
    , sepChar          = "%"
    , alignSep         = "}{"
-   , template         = "<action='jgmenu_run'><icon=haskell_20.xpm/></action><fc=white><action=button=4><action=button=5> %UnsafeStdinReader%</action></action></fc>}{<fc=white> %update%</fc><fc=#c792ea>|</fc><fc=#82aaff><fn=3>   </fn></fc>%memory% <fc=#c792ea>|</fc><fc=#82aaff><fn=3>  </fn></fc>%uname% <fc=#c792ea>|</fc> %KGNV% <fc=#c792ea>|</fc> <action=`pavucontrol` button=3><action=`XMMute` button=1><action=button=4><action=button=5>%XVol%</action></action></action></action><action=`gsimplecal` button=1><fc=#c792ea>|</fc> <fc=#82aaff><fn=2></fn></fc> %date% </action><fc=#c792ea>|</fc> %trayerpad%"
+   , template         = "<action='jgmenu_run'><icon=haskell_20.xpm/></action><fc=white><action=button=4><action=button=5> %UnsafeStdinReader%</action></action></fc>}{<fc=white> %update%</fc><fc=#ffb26b>|</fc><fc=#82aaff><fn=3>   </fn></fc>%memory% <fc=#ffb26b>|</fc><fc=#82aaff><fn=3>  </fn></fc>%uname% <fc=#ffb26b>|</fc> %KGNV% <fc=#ffb26b>|</fc> <action=`pavucontrol` button=3><action=`XMMute` button=1><action=button=4><action=button=5>%XVol%</action></action></action></action><action=`gsimplecal` button=1><fc=#ffb26b>|</fc> <fc=#82aaff><fn=2></fn></fc> %date% </action><fc=#ffb26b>|</fc> %trayerpad%"
    , commands         = [ 
 		--Run Memory [ "--template" ,"<fc=#82AAFF><fn=2> </fn></fc><fc=white></fc> <used>/<total>Mb"] 300
 
