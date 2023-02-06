@@ -2,12 +2,12 @@
 -- https://github.com/krive001/xmonad-xmobar
 
 Config {
-    font = "xft:Ubuntu Mono:size=12:style=Bold:antialias=true:autohint=true:dpi=96",
+    font = "xft:JetBrainsMono Nerd Font:size=10:style=Bold:antialias=true:autohint=true:dpi=96",
     additionalFonts = ["xft:Noto Sans:size=10:style=Bold","xft:FontAwesome:style=Regular:size=11","xft:CaskaydiaCove Nerd Font:size=12"]
 --   , bgColor          = "#2F343F"
    , bgColor          = "#1b1e2b"   
    , fgColor          = "white"
-   , position         = TopSize C 100 23
+   , position         = TopSize C 100 21
    , textOffset       = -5
    , iconOffset       = -15
    , alpha            = 255
@@ -23,7 +23,7 @@ Config {
    , iconRoot         = "/home/kbc/.config/xmobar/xpm/"  -- default: "."
    , sepChar          = "%"
    , alignSep         = "}{"
-   , template         = "<action='jgmenu_run'><icon=haskell_20.xpm/></action><fc=white><action=button=4><action=button=5> %UnsafeStdinReader%</action></action></fc>}{<fc=white> %update%</fc><fc=#ffb26b>|</fc><fc=#82aaff><fn=3>   </fn></fc>%memory% <fc=#ffb26b>|</fc><fc=#82aaff><fn=3>  </fn></fc>%uname% <fc=#ffb26b>|</fc> %KGNV% <fc=#ffb26b>|</fc> <action=`pavucontrol` button=3><action=`XMMute` button=1><action=button=4><action=button=5>%XVol%</action></action></action></action><action=`gsimplecal` button=1><fc=#ffb26b>|</fc> <fc=#82aaff><fn=2></fn></fc> %date% </action><fc=#ffb26b>|</fc> %trayerpad%"
+   , template         = "<fc=white><action=button=4><action=button=5>%UnsafeStdinReader%</action></action></fc>}{<fc=white> %update%</fc><fc=#ffb26b>|</fc><fc=#82aaff><fn=3>   </fn></fc>%memory% <fc=#ffb26b>|</fc><fc=#82aaff><fn=3>  </fn></fc>%uname% <fc=#ffb26b>|</fc> %KGNV% <fc=#ffb26b>|</fc> <action=`pavucontrol` button=3><action=`XMMute` button=1><action=button=4><action=button=5>%XVol%</action></action></action></action><action=`gsimplecal` button=1><fc=#ffb26b>|</fc> <fc=#82aaff><fn=2></fn></fc> %date% </action><fc=#ffb26b>|</fc> %trayerpad%"
    , commands         = [ 
 		--Run Memory [ "--template" ,"<fc=#82AAFF><fn=2> </fn></fc><fc=white></fc> <used>/<total>Mb"] 300
 
