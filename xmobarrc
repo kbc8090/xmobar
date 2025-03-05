@@ -2,18 +2,18 @@
 -- https://github.com/krive001/xmonad-xmobar
 
 Config {
-    font = "xft:JetBrainsMono Nerd Font:size=10:style=Bold:antialias=true:autohint=true:dpi=96",
-    additionalFonts = ["xft:Noto Sans:size=10:style=Bold","xft:FontAwesome:style=Regular:size=11","xft:CaskaydiaCove Nerd Font:size=12"]
+    font = "JetBrains Mono Bold 10",
+    additionalFonts = ["FontAwesome Regular 10","CaskaydiaCove Nerd Font Medium 10","JoyPixels Regular 8"]
 --   , bgColor          = "#2F343F"
    , bgColor          = "#1b1e2b"   
-   , fgColor          = "white"
-   , position         = TopSize C 100 21
-   , textOffset       = -5
+   , fgColor          = "White"
+   , position         = TopSize C 100 23
+   , textOffset       = -1
+   , border           = BottomB
+   , borderColor      = "#000000"
+   , borderWidth      = 0
    , iconOffset       = -15
    , alpha            = 255
-   , border           = BottomB
-   , borderWidth      = 1
-   , borderColor      = "#000000"
    , lowerOnStart     = True
    , hideOnStart      = False
    , allDesktops      = True
@@ -23,11 +23,11 @@ Config {
    , iconRoot         = "/home/kbc/.config/xmobar/xpm/"  -- default: "."
    , sepChar          = "%"
    , alignSep         = "}{"
-   , template         = "<fc=white><action=button=4><action=button=5>%UnsafeStdinReader%</action></action></fc>}{<fc=white> %update%</fc><fc=#ffb26b>|</fc><fc=#82aaff><fn=3>   </fn></fc>%memory% <fc=#ffb26b>|</fc><fc=#82aaff><fn=3>  </fn></fc>%uname% <fc=#ffb26b>|</fc> %KGNV% <fc=#ffb26b>|</fc> <action=`pavucontrol` button=3><action=`XMMute` button=1><action=button=4><action=button=5>%XVol%</action></action></action></action><action=`gsimplecal` button=1><fc=#ffb26b>|</fc> <fc=#82aaff><fn=2></fn></fc> %date% </action><fc=#ffb26b>|</fc> %trayerpad%"
+   , template         = "<fc=white><action=button=4><action=button=5>%UnsafeStdinReader%</action></action></fc>}{<fc=white> %update%</fc><fc=#ffb26b>|</fc><fc=#82aaff><fn=2>   </fn></fc>%memory% <fc=#ffb26b>|</fc><fc=#82aaff><fn=2>  </fn></fc>%uname% <fc=#ffb26b>|</fc> %KGNV% <fc=#ffb26b>|</fc> <action=`pavucontrol` button=3><action=`XMMute` button=1><action=button=4><action=button=5>%XVol%</action></action></action></action><action=`gsimplecal` button=1><fc=#ffb26b>|</fc> <fc=#82aaff><fn=1></fn></fc> %date% </action><fc=#ffb26b>|</fc> %trayerpad%"
    , commands         = [ 
-		--Run Memory [ "--template" ,"<fc=#82AAFF><fn=2> </fn></fc><fc=white></fc> <used>/<total>Mb"] 300
+		--Run Memory [ "--template" ,"<fc=#82AAFF><fn=1> </fn></fc><fc=white></fc> <used>/<total>Mb"] 300
 
-     Run Weather "KGNV" ["-t","<fc=#82aaff><fn=2></fn></fc> <skyCondition> <tempF>F","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 9000
+     Run Weather "KGNV" ["-t","<fc=#82aaff><fn=1></fn></fc> <skyCondition> <tempF>F","-L","64","-H","84","--normal","green","--high","red","--low","lightblue"] 9000
 
 	  , Run Com "/home/kbc/.config/xmobar/scripts/XMgetvolume" [] "XVol" 30
 
@@ -41,7 +41,7 @@ Config {
 
 	  , Run Com "/home/kbc/.config/xmobar/scripts/XMKupdate" [] "update" 3000
 	  
-      , Run Date "%a, %b %d %l:%M%p" "date" 50
+     , Run Date "%a, %b %d %I:%M%p" "date" 50
     ]
 
 }
